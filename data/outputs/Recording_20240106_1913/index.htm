@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript">
+function zoomToggle(num)
+{
+  var img = document.getElementById("ss-" + num);
+  
+  if (img.className == "screenshot") {
+    img.className = "screenshot-thumb";
+  }
+  else {
+    img.className = "screenshot";
+  }
+  
+  return false;
+}
+
+function AddComment(index)
+{
+    // Hide user's previous comment, "Add Comment" and "Update Comment" buttons.
+    document.getElementById("AddCommentButtonId" + index).style.display = 'none';
+    document.getElementById("UpdateCommentButtonId" + index).style.display = 'none';
+    document.getElementById("CommentTextId" + index).style.display = 'none';
+
+    // Empty text input box.
+    document.getElementById("CommentInputText" + index).value = '';
+
+    // Display text input box, OK and Cancel buttons.
+    document.getElementById("CommentInputEntityItemId" + index).style.display = 'inline';
+}
+
+function AddCommentOK(index)
+{
+    // Display user's comment.
+    document.getElementById("CommentTextId" + index).style.display = 'inline';
+    document.getElementById("CommentTextId" + index).innerText = document.getElementById("CommentInputText" + index).value;
+
+    // Display "Add Comment" or "Update Comment" button.
+    if (document.getElementById("CommentTextId" + index).innerText)
+    {
+        document.getElementById("UpdateCommentButtonId" + index).style.display = 'inline';
+    }
+    else
+    {
+        document.getElementById("AddCommentButtonId" + index).style.display = 'inline';
+    }
+
+    // Hide text input box, OK and Cancel buttons.
+    document.getElementById("CommentInputEntityItemId" + index).style.display = 'none';
+}
+
+function AddCommentCancel(index)
+{
+    // Hide text input box, OK and Cancel buttons.
+    document.getElementById("CommentInputEntityItemId" + index).style.display = 'none';
+
+    // Display user's previous comment if there is one.
+    document.getElementById("CommentTextId" + index).style.display = 'inline';
+
+    // Display "Add Comment" or "Update Comment" button.
+    if (document.getElementById("CommentTextId" + index).innerText)
+    {
+        document.getElementById("UpdateCommentButtonId" + index).style.display = 'inline';
+    }
+    else
+    {
+        document.getElementById("AddCommentButtonId" + index).style.display = 'inline';
+    }
+}
+
+</script>
+<title>Recorded Steps</title>
+</head>
+<body>
+<!-- This is the recorded XML data that was used in generating this page. -->
+<xml id="recordeddata">
+<script id="myXML" type="text/xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<Report>
+  <System MajorVersion="10" MinorVersion="0" ServicePackMajor="0" ServicePackMinor="0" BuildNumber="22621" Sku="48" Platform="2" />
+  <UserActionData>
+    <RecordSession SessionCount="1" StartTime="7:12:56 PM" StopTime="7:13:14 PM" ActionCount="7" MissedActionCount="0">
+      <EachAction ActionNumber="1" Time="7:12:57 PM" Pid="1320" ProgramId="0006b4178b4c7f9553bd66f28aee22dfe53200000000" FileId="0000c7c436161a45b4cc05cea1e1eef1fc3d9b889cc1" FileVersion="2023.2.2.IC-232.9921.47" FileDescription="IntelliJ IDEA" FileCompany="JetBrains s.r.o." FileName="IDEA64.EXE" CommandLine="IDEA64.EXE">
+        <Description>User mouse drag start on "MHTifier – mhtifier.py (window)" in "MHTifier – mhtifier.py"</Description>
+        <Action>Mouse Drag Start</Action>
+        <CursorCoordsXY>467,201</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="-8,-8,1936,1048" ClassName="SunAwtFrame" ControlType="50032" FrameworkId="Win32" Name="MHTifier – mhtifier.py" LocalizedControlType="window" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0001.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="2" Time="7:12:58 PM" Pid="1320" ProgramId="0006b4178b4c7f9553bd66f28aee22dfe53200000000" FileId="0000c7c436161a45b4cc05cea1e1eef1fc3d9b889cc1" FileVersion="2023.2.2.IC-232.9921.47" FileDescription="IntelliJ IDEA" FileCompany="JetBrains s.r.o." FileName="IDEA64.EXE" CommandLine="IDEA64.EXE">
+        <Description>User mouse drag end on "MHTifier – mhtifier.py (window)" in "MHTifier – mhtifier.py"</Description>
+        <Action>Mouse Drag End</Action>
+        <CursorCoordsXY>1190,405</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="-8,-8,1936,1048" ClassName="SunAwtFrame" ControlType="50032" FrameworkId="Win32" Name="MHTifier – mhtifier.py" LocalizedControlType="window" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0002.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="3" Time="7:12:59 PM" Pid="1724" ProgramId="000681b805dc16287bdd181e33622b76b9b300000904" FileId="00003006086e1c7cd8e997251a9ad8c9d9fa50bad455" FileVersion="8.5.8" FileDescription="Notepad++" FileCompany="Don HO don.h@free.fr" FileName="NOTEPAD++.EXE" CommandLine="NOTEPAD++.EXE">
+        <Description>User left click on "new 1 - Notepad++ (window)" in "new 1 - Notepad++"</Description>
+        <Action>Mouse Left Click</Action>
+        <CursorCoordsXY>2359,448</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="2119,384,1355,513" ClassName="Scintilla" ControlType="50033" FrameworkId="Win32" LocalizedControlType="pane" />
+          <Level BoundingRectangle="2109,282,1375,648" ClassName="Notepad++" ControlType="50032" FrameworkId="Win32" Name="new 1 - Notepad++" LocalizedControlType="window" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0003.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="4" Time="7:13:00 PM" Pid="1724" ProgramId="000681b805dc16287bdd181e33622b76b9b300000904" FileId="00003006086e1c7cd8e997251a9ad8c9d9fa50bad455" FileVersion="8.5.8" FileDescription="Notepad++" FileCompany="Don HO don.h@free.fr" FileName="NOTEPAD++.EXE" CommandLine="NOTEPAD++.EXE">
+        <Description>User keyboard input on "new 1 - Notepad++ (window)" in "new 1 - Notepad++" [... Enter Enter Enter]</Description>
+        <Action>Keyboard Input</Action>
+        <CursorCoordsXY>0,0</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="2119,384,1355,513" ClassName="Scintilla" ControlType="50033" FrameworkId="Win32" LocalizedControlType="pane" />
+          <Level BoundingRectangle="2109,282,1375,648" ClassName="Notepad++" ControlType="50032" FrameworkId="Win32" Name="new 1 - Notepad++" LocalizedControlType="window" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0004.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="5" Time="7:13:08 PM" Pid="8544" ProgramId="00067c8aed8de34b0406943a773d47684b2300000904" FileId="000055894445ef1714f45badc37ec5d740282b0146e6" FileVersion="120.0.6099.131" FileDescription="Google Chrome" FileCompany="Google LLC" FileName="CHROME.EXE" CommandLine="CHROME.EXE">
+        <Description>User left click on "jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)" in "jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome"</Description>
+        <Action>Mouse Left Click</Action>
+        <CursorCoordsXY>2103,25</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1783,41" ControlType="50018" LocalizedControlType="tab" />
+          <Level BoundingRectangle="1920,0,1920,121" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1912,-8,1936,1096" ClassName="Chrome_WidgetWin_1" ControlType="50033" FrameworkId="Win32" Name="jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome" LocalizedControlType="pane" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0005.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="6" Time="7:13:10 PM" Pid="8544" ProgramId="00067c8aed8de34b0406943a773d47684b2300000904" FileId="000055894445ef1714f45badc37ec5d740282b0146e6" FileVersion="120.0.6099.131" FileDescription="Google Chrome" FileCompany="Google LLC" FileName="CHROME.EXE" CommandLine="CHROME.EXE">
+        <Description>User left click on "Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome (pane)" in "Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome"</Description>
+        <Action>Mouse Left Click</Action>
+        <CursorCoordsXY>2279,12</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1783,41" ControlType="50018" LocalizedControlType="tab" />
+          <Level BoundingRectangle="1920,0,1920,121" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1912,-8,1936,1096" ClassName="Chrome_WidgetWin_1" ControlType="50033" FrameworkId="Win32" Name="Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome" LocalizedControlType="pane" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0006.JPEG</ScreenshotFileName>
+      </EachAction>
+      <EachAction ActionNumber="7" Time="7:13:12 PM" Pid="8544" ProgramId="00067c8aed8de34b0406943a773d47684b2300000904" FileId="000055894445ef1714f45badc37ec5d740282b0146e6" FileVersion="120.0.6099.131" FileDescription="Google Chrome" FileCompany="Google LLC" FileName="CHROME.EXE" CommandLine="CHROME.EXE">
+        <Description>User left click on "jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)" in "jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome"</Description>
+        <Action>Mouse Left Click</Action>
+        <CursorCoordsXY>2107,19</CursorCoordsXY>
+        <ScreenCoordsXYWH>0,0,3840,1080</ScreenCoordsXYWH>
+        <UIAStack>
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1948,0,494,41" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1783,41" ControlType="50018" LocalizedControlType="tab" />
+          <Level BoundingRectangle="1920,0,1920,121" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1920,0,1920,1080" ControlType="50033" LocalizedControlType="pane" />
+          <Level BoundingRectangle="1912,-8,1936,1096" ClassName="Chrome_WidgetWin_1" ControlType="50033" FrameworkId="Win32" Name="jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome" LocalizedControlType="pane" />
+        </UIAStack>
+        <ScreenshotFileName>screenshot0007.JPEG</ScreenshotFileName>
+      </EachAction>
+    </RecordSession>
+  </UserActionData>
+</Report>
+</script>
+</xml>
+<div id="ReportTop" tabindex="0">
+    <h1 title="Recorded Steps">Recorded Steps</h1>
+    <hr aria-hidden="true" />
+    <p>
+        This file contains all the steps and information that was recorded to
+        help you describe the recorded steps to others.
+    </p>
+    <p>
+        Before sharing this file, you should verify the following:
+    </p>
+    <ul>
+        <li>
+            The steps below accurately describe the recording.
+        </li>
+        <li>
+            There is no information below or on any screenshots that you do
+            not want others to see.
+        </li>
+    </ul>
+    <p>
+        Passwords or any other text you typed were not recorded, except for function
+        and shortcut keys that you used.
+    </p>    
+    
+    <p>
+        You can do the following:
+    </p>
+    <ul>
+        <li title="Review the recorded steps">
+            <a href="#Steps">Review the recorded steps</a>
+        </li>
+        
+        <li title="Review the recorded steps as a slide show">
+            <a href="slide0001.htm">Review the recorded steps as a slide show</a>
+        </li>
+        
+        <li title="Review the additional details">
+            <a href="#AdditionalDetails">Review the additional details</a>
+        </li>
+    </ul>
+    <hr aria-hidden="true" />
+</div>
+ 
+<div id="Steps" tabindex="0">
+    <h1 title="Steps">Steps</h1>
+    <hr aria-hidden="true" />
+
+    
+    <div id="Step1" title="Step1 ‎1/‎6/‎2024 7:12:57 PM User mouse drag start on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;" tabindex="0">
+        <p class="align-right">
+            
+            <a title="Next" href="#Step2">Next</a>
+        </p>
+
+        <p><b>Step 1: (‎1/‎6/‎2024 7:12:57 PM)</b> User mouse drag start on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(1)"><img id="ss-1" class="screenshot-thumb" alt="Step 1 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0001.JPEG"><span class="accessible-text">Step 1 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step2" title="Step2 ‎1/‎6/‎2024 7:12:58 PM User mouse drag end on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step1">Previous</a>
+            <a title="Next" href="#Step3">Next</a>
+        </p>
+
+        <p><b>Step 2: (‎1/‎6/‎2024 7:12:58 PM)</b> User mouse drag end on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(2)"><img id="ss-2" class="screenshot-thumb" alt="Step 2 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0002.JPEG"><span class="accessible-text">Step 2 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step3" title="Step3 ‎1/‎6/‎2024 7:12:59 PM User left click on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot;" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step2">Previous</a>
+            <a title="Next" href="#Step4">Next</a>
+        </p>
+
+        <p><b>Step 3: (‎1/‎6/‎2024 7:12:59 PM)</b> User left click on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(3)"><img id="ss-3" class="screenshot-thumb" alt="Step 3 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0003.JPEG"><span class="accessible-text">Step 3 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step4" title="Step4 ‎1/‎6/‎2024 7:13:00 PM User keyboard input on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot; [... Enter Enter Enter]" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step3">Previous</a>
+            <a title="Next" href="#Step5">Next</a>
+        </p>
+
+        <p><b>Step 4: (‎1/‎6/‎2024 7:13:00 PM)</b> User keyboard input on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot; [... Enter Enter Enter]</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(4)"><img id="ss-4" class="screenshot-thumb" alt="Step 4 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0004.JPEG"><span class="accessible-text">Step 4 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step5" title="Step5 ‎1/‎6/‎2024 7:13:08 PM User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step4">Previous</a>
+            <a title="Next" href="#Step6">Next</a>
+        </p>
+
+        <p><b>Step 5: (‎1/‎6/‎2024 7:13:08 PM)</b> User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(5)"><img id="ss-5" class="screenshot-thumb" alt="Step 5 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0005.JPEG"><span class="accessible-text">Step 5 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step6" title="Step6 ‎1/‎6/‎2024 7:13:10 PM User left click on &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome (pane)&quot; in &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome&quot;" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step5">Previous</a>
+            <a title="Next" href="#Step7">Next</a>
+        </p>
+
+        <p><b>Step 6: (‎1/‎6/‎2024 7:13:10 PM)</b> User left click on &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome (pane)&quot; in &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(6)"><img id="ss-6" class="screenshot-thumb" alt="Step 6 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0006.JPEG"><span class="accessible-text">Step 6 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+    <div id="Step7" title="Step7 ‎1/‎6/‎2024 7:13:12 PM User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;" tabindex="0">
+        <p class="align-right">
+            <a title="Previous" href="#Step6">Previous</a>
+            
+        </p>
+
+        <p><b>Step 7: (‎1/‎6/‎2024 7:13:12 PM)</b> User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;</p>
+        <!--AddCommentButton-->
+        <!--CommentInputEntityItem-->
+        <!--CommentText-->
+        <!--UpdateCommentButton-->
+
+        <a onclick="zoomToggle(7)"><img id="ss-7" class="screenshot-thumb" alt="Step 7 screenshot." title="Click to enlarge/shrink screenshot." src="screenshot0007.JPEG"><span class="accessible-text">Step 7 screenshot.</span></a>
+        <hr aria-hidden="true" />
+    </div>
+    
+</div>
+
+<div id="AdditionalDetails" tabindex="0">
+    <h1 title="Additional Details">Additional Details</h1>
+    <p>
+        The following section contains the additional details that were
+        recorded.
+    </p>
+    <p>
+        These details help accurately identify the programs and UI you
+        used in this recording.
+    </p>
+    <p>
+        This section may contain text that is internal to programs that
+        only very advanced users or programmers may understand.
+    </p>
+    <p>
+        Please review these details to ensure that they do not contain
+        any information that you would not like others to see.
+    </p>
+
+    <br />
+    <p style="font-family:verdana">
+            Recording Session: ‎1/‎6/‎2024 7:12:56 PM - 7:13:14 PM<br /><br />Recorded Steps: 7, Missed Steps: 0, Other Errors: 0<br /><br />Operating System: 22621.1.amd64fre.ni_release.220506-1250 10.0.0.0.2.48<br /><br />Step 1: User mouse drag start on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;<br />Program: IntelliJ IDEA, 2023.2.2.IC-232.9921.47, JetBrains s.r.o., IDEA64.EXE, IDEA64.EXE<br />UI Elements: MHTifier – mhtifier.py, SunAwtFrame<br /><br />Step 2: User mouse drag end on &quot;MHTifier – mhtifier.py (window)&quot; in &quot;MHTifier – mhtifier.py&quot;<br />Program: IntelliJ IDEA, 2023.2.2.IC-232.9921.47, JetBrains s.r.o., IDEA64.EXE, IDEA64.EXE<br />UI Elements: MHTifier – mhtifier.py, SunAwtFrame<br /><br />Step 3: User left click on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot;<br />Program: Notepad++, 8.5.8, Don HO don.h@free.fr, NOTEPAD++.EXE, NOTEPAD++.EXE<br />UI Elements: Scintilla, new 1 - Notepad++, Notepad++<br /><br />Step 4: User keyboard input on &quot;new 1 - Notepad++ (window)&quot; in &quot;new 1 - Notepad++&quot; [... Enter Enter Enter]<br />Program: Notepad++, 8.5.8, Don HO don.h@free.fr, NOTEPAD++.EXE, NOTEPAD++.EXE<br />UI Elements: Scintilla, new 1 - Notepad++, Notepad++<br /><br />Step 5: User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;<br />Program: Google Chrome, 120.0.6099.131, Google LLC, CHROME.EXE, CHROME.EXE<br />UI Elements: jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome, Chrome_WidgetWin_1<br /><br />Step 6: User left click on &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome (pane)&quot; in &quot;Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome&quot;<br />Program: Google Chrome, 120.0.6099.131, Google LLC, CHROME.EXE, CHROME.EXE<br />UI Elements: Modified/MHTifier: Un/packs an MHT (MHTML) archive into/from separate files, writing/reading them in directories to match their Content-Location. - Google Chrome, Chrome_WidgetWin_1<br /><br />Step 7: User left click on &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome (pane)&quot; in &quot;jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome&quot;<br />Program: Google Chrome, 120.0.6099.131, Google LLC, CHROME.EXE, CHROME.EXE<br />UI Elements: jbspillman/MHTifier: Unpacks an MHT (MHTML) from Windows Step Recorder to standard htm files. - Google Chrome, Chrome_WidgetWin_1<br /><br />
+    </p>
+    <hr aria-hidden="true" />
+    <a href="#ReportTop" title="Return to top of page"> Return to top of page... </a>
+</div>
+<div style="height:500px;">&nbsp;</div>
+</body>
+</html>
+
